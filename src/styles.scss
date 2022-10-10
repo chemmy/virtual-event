@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+
+@import './assets/scss/variables';
+@import './assets/scss/fonts';
+
+body {
+  font-family: $font-family-base;
+  color: $text-color-base;
+}
