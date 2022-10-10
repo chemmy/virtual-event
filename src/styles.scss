@@ -1,9 +1,20 @@
-@import 'bootstrap/scss/bootstrap';
-
 @import './assets/scss/variables';
 @import './assets/scss/fonts';
 
 body {
   font-family: $font-family-base;
   color: $text-color-base;
+
+  h1, h2, h3, h4, h5, h6, p, a, span, li {
+    font-family: $font-family-base;
+    color: $text-color-base;
+  }
+
+  p, a, span, li {
+    font-size: $font-size-regular;
+  }
+
+  a:hover {
+    color: $hover-color;
+  }
 }

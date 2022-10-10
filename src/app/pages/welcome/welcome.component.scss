@@ -1,0 +1,21 @@
+@import 'src/assets/scss/variables';
+
+.welcome-page {
+  display: flex;
+  margin-top: 110px;
+  margin-bottom: 110px;
+
+  .text-container {
+    flex-basis: 42%;
+    padding: 0 32px;
+    border-left: 20px solid $highlight-color;
+    border-right: 8px solid $highlight-color;
+  }
+
+  .image-container {
+    flex-basis: auto;
+    background: url('../../../assets/images/welcome-image.jpg') no-repeat center;
+    background-size: cover;
+    width: 52%;
+  }
+}

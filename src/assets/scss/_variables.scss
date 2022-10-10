@@ -1,0 +1,28 @@
+// Typography
+$suisse-intl: "Suisse Int'l";
+$font-family-base: $suisse-intl, sans-serif;
+
+$font-weight-regular: 400;
+
+$font-size-large: 36px;
+$font-size-regular: 14px;
+$font-size-small: 12px;
+
+
+// Colors
+$white: #FFFFFF;
+$dark-green: #1C3C34;
+$alto: #D6D6D6;
+$concrete: #F2F2F2;
+$dove-gray: #676767;
+$silver-chalice: #A3A3A3;
+$blue-ribbon: #0033FF;
+
+$bg-color-base: $white;
+$bg-color-light: $concrete;
+$text-color-base: $dark-green;
+$text-color-secondary: $dove-gray;
+$highlight-color: $dark-green;
+$hover-color: $blue-ribbon;
+$shadow-color: $alto;
+$divider-color: $silver-chalice;
