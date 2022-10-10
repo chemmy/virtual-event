@@ -1,0 +1,95 @@
+@import 'src/assets/scss/variables';
+
+.profile-page {
+  max-width: 375px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.profile-image {
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+  }
+}
+
+.main-details {
+  margin: 26px 0 40px;
+
+  .name {
+    font-size: $font-size-medium;
+    color: $text-color-dark;
+    font-weight: 700; // CHANGE TO MEDIUM
+    margin-bottom: 0;
+  }
+
+  .role {
+    color: $text-color-subtitle;
+  }
+}
+
+.account-settings {
+  .settings-header {
+    font-size: $font-size-larger;
+    color: $text-color-base;
+    font-weight: 700; // CHANGE TO MEDIUM
+    margin-bottom: 16px;
+  }
+
+  .detail-group {
+    margin-bottom: 32px;
+
+    > .label {
+      font-size: $font-size-regular;
+      font-weight: 700; // CHANGE TO MEDIUM
+      color: $text-color-secondary;
+    }
+
+    .detail {
+      font-size: $font-size-medium;
+      color: $text-color-dark;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.edit {
+  color: $blue-ribbon;
+  position: relative;
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 20px;
+    background: $black;
+    opacity: 0.1;
+    top: -4px;
+    left: -8px;
+    border-radius: 10px;
+  }
+
+  &:hover {
+
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.form-switch {
+  .form-check-input {
+    background-image: $white-circle;
+    background-color: $dove-gray;
+    border: none;
+    width: 45px;
+    height: 23px;
+
+    &:checked {
+      background-color: $blue-ribbon;
+    }
+  }
+}

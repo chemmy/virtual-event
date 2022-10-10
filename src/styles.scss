@@ -9,12 +9,20 @@ body {
     font-family: $font-family-base;
     color: $text-color-base;
   }
+  
+  h1 {
+    font-size: $font-size-largest;
+  }
 
   p, a, span, li {
     font-size: $font-size-regular;
   }
 
-  a:hover {
-    color: $hover-color;
+  a {
+    text-decoration: none;
+
+    :hover {
+      color: $hover-color;
+    }
   }
 }
