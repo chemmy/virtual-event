@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { IMAGE_UPLOAD_TYPE } from 'src/app/constants/image';
+import { convertCanvasToFile } from 'src/app/utilities/image';
 
 @Component({
   selector: 'app-image-upload',
@@ -7,15 +9,17 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ImageUploadComponent implements OnInit {
   @Output() onCancel = new EventEmitter();
+  @Output() onUpload: EventEmitter<any> = new EventEmitter();
+  slim: any;
+  profile: any;
+  imageUploadType: string = IMAGE_UPLOAD_TYPE;
 
   slimOptions = {
     ratio: '1:1',
     size: '200,200',
-    initialImage: '../../../assets/images/default-user.jpg',
     labelLoading: 'Uploading...',
     maxFileSize: 2,
-    service: this.slimService.bind(this),
-    didInit: this.slimInit.bind(this)
+    didInit: this.slimInit.bind(this),
   };
 
   constructor() { }
@@ -27,29 +31,20 @@ export class ImageUploadComponent implements OnInit {
     this.onCancel.emit()
   }
 
-  onSaveClick() {
-    console.log("Save clicked");
+  async onSaveClick() {
+    const canvas = this.slim?.data?.output?.image ?? "";
+    if (!canvas) {
+      
+      return console.log("Invalid image");
+      // TODO SHOW ERROR!!
+    }
+
+    convertCanvasToFile(canvas).then((file) => {
+      this.onUpload.emit(file);
+    });
   }
 
-  // called when slim has initialized
-  slimInit(data:any, slim:any) {
-    // slim instance reference
-    console.log(slim);
-
-    // current slim data object and slim reference
-    console.log(data);
-  };
-
-  // called when upload button is pressed or automatically if push is enabled
-  slimService(formdata:any, progress:any, success:any, failure:any, slim:any) {
-    // form data to post to server
-    // set serviceFormat to "file" to receive an array of files
-    console.log(formdata);
-
-    // call these methods to handle upload state
-    console.log(progress, success, failure);
-
-    // reference to Slim instance
-    console.log(slim);
+  slimInit(_: never, slim:any) {
+    this.slim = slim;
   };
 }

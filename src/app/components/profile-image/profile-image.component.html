@@ -5,6 +5,7 @@
 
 <div *ngIf="this.showUploader" class="image-uploader">
   <app-image-upload
+    (onUpload)="uploadImage($event)"
     (onCancel)="cancelUpload()"
   ></app-image-upload>
 </div>
