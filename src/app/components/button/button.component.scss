@@ -1,0 +1,33 @@
+@import 'src/assets/scss/variables';
+
+button {
+  font-size: $font-size-regular;
+  line-height: 15px;
+  padding: 5px 19px;
+  border: 1px solid $blue-ribbon;
+  color: $blue-ribbon;
+  border-radius: 15px;
+  min-width: 72px;
+
+  &:hover {
+    border-color: $dove-gray;
+    color: $dove-gray;
+  }
+
+  &.primary {
+    color: $white;
+    background-color: $blue-ribbon;
+
+    &:hover {
+      border-color: $mercury;
+      background-color: $mercury;
+      color: $cabaret;
+      font-size: $font-size-xsmall;
+      text-transform: uppercase;
+    }
+  }
+
+  &.secondary {
+    border-color: transparent;
+  }
+}

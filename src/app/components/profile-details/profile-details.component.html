@@ -1,0 +1,37 @@
+<div class="profile-details">
+  <div class="main-details">
+    <h1 class="name">{{ user.name }}</h1>
+    <span class="role">{{ user.role }}</span>
+  </div>
+
+  <div class="account-settings">
+    <h3 class="settings-header">Account Settings</h3>
+
+    <div class="detail-group">
+      <span class="label">Email Address</span>
+      <p class="detail">{{ user.email }}</p>
+    </div>
+    
+    <div class="detail-group">
+      <span class="label">Time Zone</span>
+      <p class="detail">{{ user.timezone }}</p>
+      <a class="edit-link" href="#">Edit</a>
+    </div>
+    
+    <div class="detail-group">
+      <span class="label">Visibility</span>
+      <p class="detail"><em>{{ getVisibilityMessage() }}</em></p>
+
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch" 
+          id="visibility"
+          name="visibility"
+          [(ngModel)]="visibility" 
+        >
+      </div>
+    </div>
+  </div>
+</div>

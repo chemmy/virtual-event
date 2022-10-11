@@ -25,4 +25,53 @@ body {
       color: $hover-color;
     }
   }
+
+  .edit-link {
+    color: $blue-ribbon;
+    position: relative;
+    cursor: pointer;
+  
+    &::after {
+      display: none;
+      content: "";
+      position: absolute;
+      width: 42px;
+      height: 20px;
+      background: $black;
+      opacity: 0.1;
+      top: -4px;
+      left: -8px;
+      border-radius: 10px;
+    }
+  
+    &:hover {
+  
+      &::after {
+        display: block;
+      }
+    }
+  }
+  
+  .form-switch {
+    .form-check-input {
+      background-image: $white-circle;
+      background-color: $dove-gray;
+      border: none;
+      width: 45px;
+      height: 23px;
+  
+      &:checked {
+        background-color: $blue-ribbon;
+      }
+    }
+  }
+
+  .slim {
+    width: 200px !important;
+    border-radius: 50% !important;
+
+    .slim-btn-group  {
+      padding: 10px 0;
+    }
+  }
 }

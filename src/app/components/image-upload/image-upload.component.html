@@ -1,0 +1,17 @@
+<div class="image-upload-container">
+  <div class="slim-image-upload">
+    <slim [options]="slimOptions" class="myslim">
+      <input type="file" name="foo">
+    </slim>
+  </div>
+
+  <div class="instructions">
+    <p>To replace an existing profile photo, delete it and upload a new photo. Click Save after to update your profile.</p>
+    <p>Supported file format: JPG; Maximum file size: 2MB</p>
+  </div>
+
+  <div class="actions">
+    <app-button text="Cancel" type="secondary" (click)="onCancelClick()"></app-button>
+    <app-button text="Save" type="primary" (click)="onSaveClick()"></app-button>
+  </div>
+</div>

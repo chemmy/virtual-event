@@ -1,0 +1,11 @@
+@import 'src/assets/scss/variables';
+
+.image-upload-container {
+  .instructions {
+    margin-top: 8px;
+
+    p {
+      color: $text-color-secondary;
+    }
+  }
+}
