@@ -15,4 +15,35 @@
       }
     }
   }
+
+  .nav-link {
+    &.nav-image {
+      position: relative;
+      
+      > img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      > .visibility {
+        position: absolute;
+        bottom: 1px;
+        left: 26px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $dove-gray;
+        border: 1px solid $white;
+
+        &.visible {
+          background-color: $downriver;
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
 }
