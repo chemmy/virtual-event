@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { lastValueFrom } from 'rxjs';
-import { OccamlabApiService } from 'src/app/services/occamlab-api.service';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/state/app.state';
+import { uploadImage } from 'src/app/state/user/user.actions';
+import { UserState } from 'src/app/state/user/user.reducer';
+import { selectImage } from 'src/app/state/user/user.selectors';
 
 @Component({
   selector: 'app-profile-image',
@@ -9,10 +12,15 @@ import { OccamlabApiService } from 'src/app/services/occamlab-api.service';
 })
 export class ProfileImageComponent implements OnInit {
   showUploader: boolean = false;
+  storeImage$ = this.store.select(selectImage);
+  storeImageUrl: string = '';
 
-  constructor(private occamlabApi: OccamlabApiService) { }
+  constructor(private store: Store<AppState>) { }
 
   async ngOnInit(): Promise<void> {
+    this.storeImage$.subscribe((data) => {
+      this.storeImageUrl = data;
+    });
   }
 
   onEditClick() {
@@ -23,7 +31,8 @@ export class ProfileImageComponent implements OnInit {
     this.showUploader = false;
   }
 
-  async uploadImage(file: File) {
-    this.occamlabApi.uploadImage(file).subscribe((a) => console.log({ a }));
+  uploadImage(file: File) {
+    console.log("uploadTry", file);
+    this.store.dispatch(uploadImage({ file }));
   }
 }

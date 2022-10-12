@@ -13,7 +13,7 @@ export class AuthService {
   async updateAccessToken(): Promise<string> {
     localStorage.clear();
 
-    const auth$ = this.occamlabApi.login();
+    const auth$ = this.occamlabApi.login2();
     const data = await lastValueFrom(auth$);
     const { auth_token } = data;
     console.log('updateAccessToken', data);

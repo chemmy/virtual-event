@@ -7,8 +7,9 @@ import { User } from 'src/app/types/User';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  // TODO: use data store
   user: User = {
-    name: 'Sarah Patricia Sarahson',
+    name: 'Sarah Patricia Sarahson', 
     role: 'SVP, Occam Lab Pte Ltd',
     email: 'Sarah.Patricia@tlf.com',
     timezone: '(UTC+08:00) Kuala Lumpur, Singapore',

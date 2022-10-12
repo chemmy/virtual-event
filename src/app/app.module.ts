@@ -15,6 +15,10 @@ import { ImageUploadComponent } from './components/image-upload/image-upload.com
 import { ProfileImageComponent } from './components/profile-image/profile-image.component';
 import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
 import { ButtonComponent } from './components/button/button.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { userReducer } from './state/user/user.reducer';
+import { UserEffects } from './state/user/user.effects';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { ButtonComponent } from './components/button/button.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SlimModule
+    SlimModule,
+    StoreModule.forRoot({ user: userReducer }),
+    EffectsModule.forRoot([UserEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
