@@ -19,6 +19,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { userReducer } from './state/user/user.reducer';
 import { UserEffects } from './state/user/user.effects';
+import { NavToggleHoverDirective } from './directives/nav-toggle-hover.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UserEffects } from './state/user/user.effects';
     ImageUploadComponent,
     ProfileImageComponent,
     ProfileDetailsComponent,
-    ButtonComponent
+    ButtonComponent,
+    NavToggleHoverDirective
   ],
   imports: [
     BrowserModule,
