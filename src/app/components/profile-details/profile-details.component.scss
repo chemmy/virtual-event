@@ -6,7 +6,7 @@
   .name {
     font-size: $font-size-medium;
     color: $text-color-dark;
-    font-weight: 700; // CHANGE TO MEDIUM
+    font-weight: $font-weight-bold;
     margin-bottom: 0;
   }
 
@@ -17,9 +17,9 @@
 
 .account-settings {
   .settings-header {
-    font-size: $font-size-larger;
+    font-size: $font-size-large;
     color: $text-color-base;
-    font-weight: 700; // CHANGE TO MEDIUM
+    font-weight: $font-weight-bold;
     margin-bottom: 16px;
   }
 
@@ -28,14 +28,14 @@
 
     > .label {
       font-size: $font-size-regular;
-      font-weight: 700; // CHANGE TO MEDIUM
+      font-weight: $font-weight-bold;
       color: $text-color-secondary;
     }
 
     .detail {
       font-size: $font-size-medium;
       color: $text-color-dark;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
   }
 }

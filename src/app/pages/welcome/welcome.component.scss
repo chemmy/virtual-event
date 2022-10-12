@@ -8,13 +8,27 @@
 
   .text-container {
     padding: 34px 0px 32px 0;
+
+    .welcome {
+      margin-bottom: 25px;
+    }
+
+    .message p {
+      font-size: $font-size-large;
+      line-height: 25px;
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .image-container {
     background: none;
     order: -1;
-    padding: 14px 0;
-    border-top: 12px solid $highlight-color;
+    padding: 13px 0;
+    border-top: 13px solid $highlight-color;
     border-bottom: 5px solid $highlight-color;
 
     img {
@@ -24,7 +38,7 @@
 
   .stripes-container {
     border-top: 3px solid $highlight-color;
-    border-bottom: 12px solid $highlight-color;
+    border-bottom: 13px solid $highlight-color;
 
     .stripes {
       background-color: $highlight-color;
@@ -39,10 +53,20 @@
     flex-direction: row;
 
     .text-container {
-      padding: 0 32px;
+      padding: 8px 32px;
       flex-basis: 42%;
-      border-left: 20px solid $highlight-color;
-      border-right: 8px solid $highlight-color;
+      border-left: 19px solid $highlight-color;
+      border-right: 7px solid $highlight-color;
+
+      .message p {
+        font-size: $font-size-regular;
+        line-height: 22px;
+        margin-bottom: 22px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
 
     .image-container {
@@ -62,7 +86,7 @@
 
     .stripes-container {
       border-left: 4px solid $highlight-color;
-      border-right: 18px solid $highlight-color;
+      border-right: 19px solid $highlight-color;
       border-top: none;
       border-bottom: none;
       margin-left: 4px;

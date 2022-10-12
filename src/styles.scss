@@ -11,11 +11,12 @@ body {
   }
   
   h1 {
-    font-size: $font-size-largest;
+    font-size: $font-size-larger;
   }
 
   p, a, span, li {
     font-size: $font-size-regular;
+    line-height: 25px;
   }
 
   a {
@@ -35,6 +36,10 @@ body {
   }
 
   @media screen and (min-width: $screen-md) {
+    h1 {
+      font-size: $font-size-largest;
+    }
+
     .page-content {
       margin-top: 48px;
       margin-bottom: 0;
@@ -53,22 +58,22 @@ body {
     position: relative;
     cursor: pointer;
   
-    &::after {
+    &::before {
       display: none;
       content: "";
       position: absolute;
-      width: 42px;
-      height: 20px;
+      width: 44px;
+      height: 22px;
       background: $black;
       opacity: 0.1;
-      top: -4px;
+      top: -2px;
       left: -8px;
       border-radius: 10px;
     }
   
     &:hover {
   
-      &::after {
+      &::before {
         display: block;
       }
     }
@@ -81,6 +86,7 @@ body {
       border: none;
       width: 45px;
       height: 23px;
+      cursor: pointer;
   
       &:checked {
         background-color: $downriver;
@@ -107,6 +113,12 @@ body {
 
       .slim-btn-group  {
         padding: 10px 0;
+      }
+
+      .slim-label {
+        > p {
+          color: $text-color-secondary;
+        }
       }
 
       .loader {
