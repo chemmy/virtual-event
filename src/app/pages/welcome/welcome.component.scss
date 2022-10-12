@@ -2,20 +2,77 @@
 
 .welcome-page {
   display: flex;
-  margin-top: 110px;
-  margin-bottom: 110px;
+  margin-top: 48px;
+  margin-bottom: 64px;
+  flex-direction: column;
 
   .text-container {
-    flex-basis: 42%;
-    padding: 0 32px;
-    border-left: 20px solid $highlight-color;
-    border-right: 8px solid $highlight-color;
+    padding: 34px 0px 32px 0;
   }
 
   .image-container {
-    flex-basis: auto;
-    background: url('../../../assets/images/welcome-image.jpg') no-repeat center;
-    background-size: cover;
-    width: 52%;
+    background: none;
+    order: -1;
+    padding: 14px 0;
+    border-top: 12px solid $highlight-color;
+    border-bottom: 5px solid $highlight-color;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .stripes-container {
+    border-top: 3px solid $highlight-color;
+    border-bottom: 12px solid $highlight-color;
+
+    .stripes {
+      background-color: $highlight-color;
+      margin: 40px 0 14px;
+      height: 5px;
+    }
+  }
+
+  @media screen and (min-width: $screen-md) {
+    margin-top: 110px;
+    margin-bottom: 110px;
+    flex-direction: row;
+
+    .text-container {
+      padding: 0 32px;
+      flex-basis: 42%;
+      border-left: 20px solid $highlight-color;
+      border-right: 8px solid $highlight-color;
+    }
+
+    .image-container {
+      flex-basis: auto;
+      background: url('../../../assets/images/welcome-image.jpg') no-repeat center;
+      background-size: cover;
+      width: 52%;
+      order: 0;
+      padding: 0;
+      border-top: none;
+      border-bottom: none;
+
+      img {
+        display: none;
+      }
+    }
+
+    .stripes-container {
+      border-left: 4px solid $highlight-color;
+      border-right: 18px solid $highlight-color;
+      border-top: none;
+      border-bottom: none;
+      margin-left: 4px;
+  
+      .stripes {
+        background-color: $highlight-color;
+        margin: 0 6px 0 7px;
+        width: 7px;
+        height: 100%;
+      }
+    }
   }
 }
