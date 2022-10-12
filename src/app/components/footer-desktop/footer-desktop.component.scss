@@ -1,0 +1,73 @@
+@import 'src/assets/scss/variables';
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .footer-nav {
+    > .nav-group {
+      margin-bottom: 14px;
+
+      > li {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  .socials {
+   align-items: center;
+
+    p {
+      color: $text-color-secondary;
+    }
+
+    > li:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    svg:hover {
+      rect {
+        fill: $hover-color;
+      }
+    }
+  }
+}
+
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 12px;
+  margin-top: 20px;
+  border-top: 1px solid $silver-chalice;
+
+  a, p {
+    color: $text-color-secondary;
+    font-size: $font-size-small;
+  }
+
+  .legal {
+    margin-bottom: 5px;
+
+    li {
+      &+li::before {
+        content: "|";
+      }
+      
+      &:not(:first-child) a {
+        padding-left: 6px;
+      }
+      
+      &:not(:last-child) a {
+        padding-right: 6px;
+      }
+    }           
+  }
+}

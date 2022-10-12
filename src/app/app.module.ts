@@ -20,6 +20,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { userReducer } from './state/user/user.reducer';
 import { UserEffects } from './state/user/user.effects';
 import { NavToggleHoverDirective } from './directives/nav-toggle-hover.directive';
+import { StatusDisplayComponent } from './components/status-display/status-display.component';
+import { NavDesktopComponent } from './components/nav-desktop/nav-desktop.component';
+import { FooterDesktopComponent } from './components/footer-desktop/footer-desktop.component';
+import { FooterMobileComponent } from './components/footer-mobile/footer-mobile.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { NavToggleHoverDirective } from './directives/nav-toggle-hover.directive
     ProfileImageComponent,
     ProfileDetailsComponent,
     ButtonComponent,
-    NavToggleHoverDirective
+    NavToggleHoverDirective,
+    StatusDisplayComponent,
+    NavDesktopComponent,
+    FooterDesktopComponent,
+    FooterMobileComponent
   ],
   imports: [
     BrowserModule,

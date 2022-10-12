@@ -1,73 +1,17 @@
 @import 'src/assets/scss/variables';
 
 footer {
-  background-color: $bg-color-light;
+  background-color: $bg-color-base;
   box-shadow: 0px -1px 3px $shadow-color;
-  padding: 24px 0;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-  display: flex;
-}
-
-.top-section {
-  display: flex;
-  justify-content: space-between;
+  padding: 6px 0;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
   width: 100%;
 
-  .footer-nav {
-    > .nav-group {
-      margin-bottom: 14px;
-
-      > li {
-        margin-right: 40px;
-      }
-    }
-  }
-
-  .socials {
-   align-items: center;
-
-   p {
-    color: $text-color-secondary;
-   }
-   
-   > li:not(:last-child) {
-    margin-right: 24px;
-   }
-  }
-}
-
-.bottom-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-top: 12px;
-  margin-top: 20px;
-  border-top: 1px solid $silver-chalice;
-
-  a, p {
-    color: $text-color-secondary;
-    font-size: $font-size-small;
-  }
-
-  .legal {
-    margin-bottom: 5px;
-
-    li {
-      &+li::before {
-        content: "|";
-      }
-      
-      &:not(:first-child) a {
-        padding-left: 6px;
-      }
-      
-      &:not(:last-child) a {
-        padding-right: 6px;
-      }
-    }           
+  @media screen and (min-width: $screen-md) {
+    background-color: $bg-color-light;
+    padding: 24px 0;
+    position: initial;
   }
 }

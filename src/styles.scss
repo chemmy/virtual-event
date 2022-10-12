@@ -26,6 +26,28 @@ body {
     }
   }
 
+  .page-content {
+    margin-bottom: 48px;
+  }
+
+  .container {
+    --bs-gutter-x: 3rem;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    .page-content {
+      margin-top: 48px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    .container {
+      --bs-gutter-x: 1.5rem;
+      max-width: 1112px;
+    }
+  }
+
   .edit-link {
     color: $blue-ribbon;
     position: relative;
@@ -78,12 +100,10 @@ body {
     100% {background-position:calc(0*100%/3) 100%, calc(1*100%/3) 100%, calc(2*100%/3) 100%, calc(3*100%/3) 100%}
   }
 
-  
-
   .form-upload {
     .slim {
-      width: 200px !important;
-      border-radius: 50% !important;
+      width: 200px;
+      border-radius: 50%;
 
       .slim-btn-group  {
         padding: 10px 0;
@@ -127,4 +147,9 @@ body {
       }
     }
   }
+}
+
+.container {
+  padding-right: 24px;
+  padding-left: 24px;
 }

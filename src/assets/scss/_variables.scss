@@ -2,7 +2,8 @@
 $suisse-intl: "Suisse Int'l";
 $font-family-base: $suisse-intl, sans-serif;
 
-$font-weight-regular: 400;
+$font-weight-regular: 300;
+$font-weight-bold: 500;
 
 $font-size-largest: 36px;
 $font-size-larger: 18px;
@@ -40,5 +41,13 @@ $hover-color: $blue-ribbon;
 $shadow-color: $alto;
 $divider-color: $silver-chalice;
 
+// Screens
+$screen-xl: 1400px;
+$screen-lg: 1200px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 576px;
+
 // Svgs
-$white-circle: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>")
+$white-circle: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+$green-hamburger: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%2828, 60, 52, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
