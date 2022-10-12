@@ -1,7 +1,11 @@
 <div class="image-upload-container">
-  <form class="form-upload">
+  <form class="form-upload" [ngClass]="{ 'uploading': uploading }">
     <slim [options]="slimOptions" class="myslim">
       <input type="file" name="profile" accept="{{ imageUploadType }}" required>
+      <div *ngIf="uploading" class="loader">
+        <div class="message">Uploading</div>
+        <div class="dot"></div>
+      </div>
     </slim>
 
     <div class="instructions">
@@ -9,9 +13,19 @@
       <p>Supported file format: JPG; Maximum file size: 2MB</p>
     </div>
   
-    <div class="actions">
-      <app-button text="Cancel" type="secondary" (click)="onCancelClick()"></app-button>
-      <app-button text="Save" type="primary" (click)="onSaveClick()"></app-button>
+    <div class="actions d-flex gap-1">
+      <app-button
+        text="Cancel"
+        type="secondary"
+        [disabled]="uploading"
+        (click)="onCancelClick()"
+      ></app-button>
+      <app-button
+        text="Save"
+        type="primary"
+        [disabled]="disableSave()"
+        (click)="onSaveClick()"
+      ></app-button>
     </div>
   </form>
 </div>

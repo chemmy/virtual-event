@@ -3,7 +3,7 @@
 button {
   font-size: $font-size-regular;
   line-height: 15px;
-  padding: 5px 19px;
+  padding: 6px 19px;
   border: 1px solid $blue-ribbon;
   color: $blue-ribbon;
   border-radius: 15px;
@@ -25,9 +25,21 @@ button {
       font-size: $font-size-xsmall;
       text-transform: uppercase;
     }
+
+    &:disabled {
+      background-color: $malibu;
+      opacity: 1;
+      color: $concrete;
+    }
   }
 
   &.secondary {
     border-color: transparent;
+    padding: 6px 8px;
+    min-width: auto;
+
+    &:hover {
+      color: $blue-ribbon;
+    }
   }
 }

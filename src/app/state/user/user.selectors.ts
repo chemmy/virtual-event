@@ -11,3 +11,7 @@ export const selectImage = createSelector(
   selectUser,
   (state: UserState) => state.imageUrl,
 );
+export const selectUploading = createSelector(
+  selectUser,
+  (state: UserState) => state.uploading,
+);

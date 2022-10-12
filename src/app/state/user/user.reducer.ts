@@ -1,11 +1,12 @@
 import { createReducer, on } from "@ngrx/store";
 import { User } from "src/app/types/User";
-import { updateImage, updateVisibility } from "./user.actions";
+import { setUploading, updateImage, updateVisibility } from "./user.actions";
 
 export interface UserState {
   details: User;
   visibility: boolean;
   imageUrl: string;
+  uploading: boolean;
 }
 
 export const initialState: UserState = {
@@ -17,10 +18,12 @@ export const initialState: UserState = {
   },
   visibility: false,
   imageUrl: '',
+  uploading: false,
 }
 
 export const userReducer = createReducer(
   initialState,
   on(updateVisibility, (state, { visibility }) => ({ ...state, visibility })),
-  on(updateImage, (state, { imageUrl }) => ({ ...state, imageUrl })),
+  on(updateImage, (state, { imageUrl }) => ({ ...state, imageUrl, uploading: false })),
+  on(setUploading, (state, { uploading }) => ({ ...state, uploading })),
 );

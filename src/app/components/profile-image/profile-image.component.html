@@ -1,15 +1,12 @@
 <div *ngIf="!this.showUploader" class="profile-image">
-  <img src="../../../assets/images/default-user.jpg" alt="Profile image">
+  <img src="{{ getImageSource() }}" alt="Profile image">
   <a class="edit-link" (click)="onEditClick()">Edit</a>
 </div>
 
 <div *ngIf="this.showUploader" class="image-uploader">
   <app-image-upload
+    [uploading]="uploading"
     (onUpload)="uploadImage($event)"
     (onCancel)="cancelUpload()"
   ></app-image-upload>
-</div>
-
-<div class="try-display">
-  <h4>{{ storeImageUrl }}</h4>
 </div>
