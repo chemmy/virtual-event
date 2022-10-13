@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/occam-fe-challenge",
+            "outputPath": "dist/virtual-event",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,7 +30,7 @@
             "styles": [
               "src/styles.scss",
               "node_modules/bootstrap/scss/bootstrap.scss",
-              "src/assets/lib/slim/slim.css"
+              "src/app/slim/slim.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

@@ -29,6 +29,7 @@ export class Slim implements OnInit {
 			const img = document.createElement('img');
 			img.setAttribute('alt', '');
 			img.src = this.options.initialImage;
+      console.log("imgsrc", img.src);
 			this.element.nativeElement.appendChild(img);
 		}
 

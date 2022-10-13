@@ -11,21 +11,19 @@ import { selectImage, selectUploading } from 'src/app/state/user/user.selectors'
   styleUrls: ['./profile-image.component.scss']
 })
 export class ProfileImageComponent implements OnInit {
-  storeImage$ = this.store.select(selectImage);
-  storeUploading$ = this.store.select(selectUploading);
-  showUploader: boolean = false;
-  imageUrl: string = '';
-  uploading: boolean = false;
+  public showUploader: boolean = false;
+  public imageUrl: string = '';
+  public uploading: boolean = false;
 
   constructor(private store: Store<AppState>) { }
 
-  async ngOnInit(): Promise<void> {
-    this.storeImage$.subscribe((data) => {
+  ngOnInit(): void {
+    this.store.select(selectImage).subscribe((data) => {
       this.imageUrl = data;
       this.showUploader = !this.imageUrl;
     });
 
-    this.storeUploading$.subscribe((data) => {
+    this.store.select(selectUploading).subscribe((data) => {
       this.uploading = data;
     });
   }
@@ -38,7 +36,7 @@ export class ProfileImageComponent implements OnInit {
     this.showUploader = false;
   }
 
-  uploadImage(file: File) {
+  uploadNewImage(file: File) {
     this.store.dispatch(setUploading({ uploading: true }));
     this.store.dispatch(uploadImage({ file }));
   }

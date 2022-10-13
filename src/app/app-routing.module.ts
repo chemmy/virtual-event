@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ProfileComponent } from './pages/profile/profile.component';
-import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { ProfileComponent } from './profile/components/profile/profile.component';
+import { ProfileModule } from './profile/profile.module';
+import { WelcomeComponent } from './welcome/component/welcome.component';
+import { WelcomeModule } from './welcome/welcome.module';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -10,7 +12,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    WelcomeModule,
+    ProfileModule
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -331,7 +331,8 @@ loadImage.scale = function (img, options) {
 }
 
 loadImage.createObjectURL = function (file) {
-    return urlAPI ? urlAPI.createObjectURL(file) : false
+    const a = urlAPI ? urlAPI.createObjectURL(file) : false
+    return a;
 }
 
 loadImage.revokeObjectURL = function (url) {
