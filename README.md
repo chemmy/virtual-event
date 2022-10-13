@@ -27,7 +27,7 @@ Notes about the state management:
 ### `IMPROVEMENTS`
 
 - Use localstorage to store access token
-- Error handling when 401 is returned by upload-test endpoint, call login to get accesstoken
+- Error handling when 401 is returned by upload-test endpoint, call login to get accesstoken with HttpInterceptor
 - Smooth transitions
 
 ### `Possible ways to fix npm install issues`
