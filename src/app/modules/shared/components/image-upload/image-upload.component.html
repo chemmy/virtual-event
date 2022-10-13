@@ -14,18 +14,13 @@
     </div>
   
     <div class="actions d-flex gap-1">
-      <app-button
-        text="Cancel"
-        type="secondary"
-        [disabled]="uploading"
-        (click)="onCancelClick()"
-      ></app-button>
-      <app-button
-        text="Save"
-        type="primary"
-        [disabled]="disableSave()"
-        (click)="onSaveClick()"
-      ></app-button>
+      <button class="btn secondary" type="button" [disabled]="uploading" (click)="onCancelClick()">
+        Cancel
+      </button>
+
+      <button class="btn primary" type="button" [disabled]="disableSave()" (click)="onSaveClick()">
+        Save
+      </button>
     </div>
   </form>
 </div>

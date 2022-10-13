@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileComponent } from './modules/profile/components/profile/profile.component';
+import { ProfileModule } from './modules/profile/profile.module';
 import { WelcomeComponent } from './modules/welcome-page/components/welcome/welcome.component';
 import { WelcomePageModule } from './modules/welcome-page/welcome-page.module';
 
@@ -13,7 +14,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    WelcomePageModule
+    WelcomePageModule,
+    ProfileModule
   ],
   exports: [RouterModule]
 })

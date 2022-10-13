@@ -30,13 +30,12 @@ export class ImageUploadComponent implements OnInit {
     this.onCancel.emit()
   }
 
-  async onSaveClick() {
+  onSaveClick() {
     const canvas = this.slim?.data?.output?.image ?? "";
     if (!canvas) return;
 
     convertCanvasToFile(canvas).then((file) => {
-      console.log({ file });
-      // this.onUpload.emit(file);
+      this.onUpload.emit(file);
     });
   }
 
