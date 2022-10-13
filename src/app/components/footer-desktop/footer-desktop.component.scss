@@ -30,17 +30,11 @@ ul {
 
     p {
       color: $text-color-secondary;
-      margin-bottom: 14px;
+      margin-bottom: 6px;
     }
 
     > li:not(:last-child) {
-      margin-right: 24px;
-    }
-
-    svg:hover {
-      rect {
-        fill: $hover-color;
-      }
+      margin-right: 20px;
     }
   }
 }

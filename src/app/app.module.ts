@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SlimModule } from '../assets/lib/slim/slim.angular.module'
@@ -49,7 +50,8 @@ import { FooterMobileComponent } from './components/footer-mobile/footer-mobile.
     FormsModule,
     SlimModule,
     StoreModule.forRoot({ user: userReducer }),
-    EffectsModule.forRoot([UserEffects])
+    EffectsModule.forRoot([UserEffects]),
+    AngularSvgIconModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

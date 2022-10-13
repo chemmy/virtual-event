@@ -22,8 +22,14 @@ body {
   a {
     text-decoration: none;
 
-    :hover {
+    &:hover {
       color: $hover-color;
+
+      .icon svg {
+        path, rect, tspan {
+          fill: $hover-color;
+        }
+      }
     }
   }
 
@@ -44,9 +50,7 @@ body {
       margin-top: 48px;
       margin-bottom: 0;
     }
-  }
 
-  @media screen and (min-width: $screen-xl) {
     .container {
       --bs-gutter-x: 1.5rem;
       max-width: 1112px;
