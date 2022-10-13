@@ -4,14 +4,15 @@ import { Observable, of, map, mergeMap } from 'rxjs';
 import { Authentication, ProfileImage } from '../types/User';
 import { IMAGE_UPLOAD_TYPE } from '../constants/image';
 import { AUTH_STORAGE_KEY } from '../constants/auth';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OccamlabApiService {
-  private baseUrl = 'https://api.occamlab.com.sg/demo-occamlab';
-  private loginEmail = 'sample-user@test.com';
-  private loginPassword = 'sample-password'; // TODO: change to env?
+  private baseUrl = environment.occamApiUrl;
+  private loginEmail = environment.occamApiEmail;
+  private loginPassword = environment.occamApiPassword;
 
   constructor(private http: HttpClient) { }
 

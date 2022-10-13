@@ -12,7 +12,6 @@ export class UserEffects {
     return this.actions$.pipe(
       ofType(uploadImage),
       mergeMap((action) => {
-        console.log("Effect called", action);
         return this.occamlabApi.uploadImage(action.file).pipe(
           map((data) => {
             const imageUrl = data.image_url;

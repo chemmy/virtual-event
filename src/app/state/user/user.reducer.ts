@@ -9,7 +9,7 @@ export interface UserState {
   uploading: boolean;
 }
 
-export const initialState: UserState = {
+const initialState: UserState = {
   details: {
     name: 'Sarah Patricia Sarahson',
     role: 'SVP, Occam Lab Pte Ltd',

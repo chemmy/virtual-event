@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/state/app.state';
+import { selectUserDetails } from 'src/app/state/user/user.selectors';
 import { User } from 'src/app/types/User';
 
 @Component({
@@ -7,16 +10,14 @@ import { User } from 'src/app/types/User';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  // TODO: use data store
-  user: User = {
-    name: 'Sarah Patricia Sarahson', 
-    role: 'SVP, Occam Lab Pte Ltd',
-    email: 'Sarah.Patricia@tlf.com',
-    timezone: '(UTC+08:00) Kuala Lumpur, Singapore',
-  };
+  storeImage$ = this.store.select(selectUserDetails);
+  user!: User;
 
-  constructor() { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
+    this.storeImage$.subscribe((data) => {
+      this.user = data;
+    });
   }
 }
