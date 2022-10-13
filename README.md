@@ -34,4 +34,4 @@ Notes about the state management:
 
 - Update versions of node/npm
 - Install @angular/cli
--
+- Run this script for issue on installing angular cli `npm config set registry http://registry.npmjs.org`
