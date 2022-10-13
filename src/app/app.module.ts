@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { SlimModule } from '../assets/lib/slim/slim.angular.module'
 
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ImageUploadComponent } from './components/image-upload/image-upload.component';
 import { ProfileImageComponent } from './components/profile-image/profile-image.component';
@@ -24,7 +23,6 @@ import { FooterModule } from './modules/footer/footer.module';
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
     ProfileComponent,
     ImageUploadComponent,
     ProfileImageComponent,
