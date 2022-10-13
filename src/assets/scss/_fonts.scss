@@ -19,3 +19,14 @@
         url('../fonts/SuisseIntl-Medium.woff2') format('woff'), /* Very Modern Browsers */
         url('../fonts/SuisseIntl-Medium.ttf') format('truetype') /* Safari, Android, iOS */
 }
+
+@font-face {
+  font-family: $canela-deck;
+  font-weight: $font-weight-bold;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/CanelaDeck-Medium.otf');
+  src: url('../fonts/CanelaDeck-Medium.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/CanelaDeck-Medium.woff2') format('woff'), /* Very Modern Browsers */
+        url('../fonts/CanelaDeck-Medium.ttf') format('truetype') /* Safari, Android, iOS */
+}
