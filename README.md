@@ -1,6 +1,6 @@
 ### `SETTING UP`
 
-- Clone repo
+- Clone repository or download zip
 - Run the following scripts:
   - npm i
   - npm run start
@@ -29,3 +29,9 @@ Notes about the state management:
 - Use localstorage to store access token
 - Error handling when 401 is returned by upload-test endpoint, call login to get accesstoken
 - Smooth transitions
+
+### `Possible ways to fix npm install issues`
+
+- Update versions of node/npm
+- Install @angular/cli
+-
