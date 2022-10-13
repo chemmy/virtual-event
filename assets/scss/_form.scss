@@ -1,0 +1,16 @@
+.page-content {
+  .form-switch {
+    .form-check-input {
+      background-image: $white-circle;
+      background-color: $dove-gray;
+      border: none;
+      width: 45px;
+      height: 23px;
+      cursor: pointer;
+  
+      &:checked {
+        background-color: $downriver;
+      }
+    }
+  }
+}

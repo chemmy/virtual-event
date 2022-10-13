@@ -1,0 +1,54 @@
+// Typography
+$suisse-intl: "Suisse Int'l";
+$font-family-base: $suisse-intl, sans-serif;
+
+$font-weight-regular: 300;
+$font-weight-bold: 500;
+
+$font-size-largest: 36px;
+$font-size-larger: 30px;
+$font-size-large: 18px;
+$font-size-medium: 16px;
+$font-size-regular: 14px;
+$font-size-small: 12px;
+$font-size-xsmall: 11px;
+
+
+// Colors
+$white: #FFFFFF;
+$black: #000000;
+$dark-green: #1C3C34;
+$alto: #D6D6D6;
+$concrete: #F2F2F2;
+$dove-gray: #676767;
+$silver-chalice: #A3A3A3;
+$tuna: #3C3C40;
+$blue-ribbon: #0033FF;
+$mercury: #E7E7E7;
+$cabaret: #CE426E;
+$malibu: #8CA3FF;
+$downriver: #071D49;
+
+$bg-color-base: $white;
+$bg-color-light: $concrete;
+$bg-color-dark: rgba($color: $black, $alpha: 0.8);
+$text-color-base: $dark-green;
+$text-color-dark: $black;
+$text-color-light: $white;
+$text-color-secondary: $dove-gray;
+$text-color-subtitle: $tuna;
+$highlight-color: $dark-green;
+$hover-color: $blue-ribbon;
+$shadow-color: $alto;
+$divider-color: $silver-chalice;
+
+// Screens
+$screen-xl: 1400px;
+$screen-lg: 1200px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 576px;
+
+// Svgs
+$white-circle: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+$green-hamburger: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%2828, 60, 52, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
