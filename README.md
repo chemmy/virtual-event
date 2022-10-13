@@ -1,27 +1,31 @@
-# OccamFeChallenge
+### `SETTING UP`
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
+- Clone repo
+- Run the following scripts:
+  - npm i
+  - npm run start
 
-## Development server
+### `APP`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The app consists of the following pages:
 
-## Code scaffolding
+- A welcome page showing text and image content
+- A profile page where the user details are shown
+  - User may upload image and manipulate the image via crop and rotate functions
+  - User may also set the visibility
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Notes about the state management:
 
-## Build
+- State will not be cleared as long as the links are used to navigate between pages
+- Refreshing will cause the state to be reset
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### `ADDITIONAL LIBRARIES`
 
-## Running unit tests
+- Used `angular-svg-icon` to render svgs
+- Used `ngrx` for state management
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### `IMPROVEMENTS`
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Use localstorage to store access token
+- Error handling when 401 is returned by upload-test endpoint, call login to get accesstoken
+- Smooth transitions
