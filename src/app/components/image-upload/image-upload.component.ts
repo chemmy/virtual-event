@@ -35,7 +35,8 @@ export class ImageUploadComponent implements OnInit {
     if (!canvas) return;
 
     convertCanvasToFile(canvas).then((file) => {
-      this.onUpload.emit(file);
+      console.log({ file });
+      // this.onUpload.emit(file);
     });
   }
 

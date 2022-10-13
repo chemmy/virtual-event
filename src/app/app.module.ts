@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { SlimModule } from '../assets/lib/slim/slim.angular.module'
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -20,16 +19,13 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { userReducer } from './state/user/user.reducer';
 import { UserEffects } from './state/user/user.effects';
-import { NavToggleHoverDirective } from './directives/nav-toggle-hover.directive';
-import { StatusDisplayComponent } from './components/status-display/status-display.component';
-import { NavDesktopComponent } from './components/nav-desktop/nav-desktop.component';
 import { FooterDesktopComponent } from './components/footer-desktop/footer-desktop.component';
 import { FooterMobileComponent } from './components/footer-mobile/footer-mobile.component';
+import { HeaderModule } from './modules/header/header.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
     WelcomeComponent,
     ProfileComponent,
@@ -37,13 +33,11 @@ import { FooterMobileComponent } from './components/footer-mobile/footer-mobile.
     ProfileImageComponent,
     ProfileDetailsComponent,
     ButtonComponent,
-    NavToggleHoverDirective,
-    StatusDisplayComponent,
-    NavDesktopComponent,
     FooterDesktopComponent,
     FooterMobileComponent
   ],
   imports: [
+    HeaderModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
