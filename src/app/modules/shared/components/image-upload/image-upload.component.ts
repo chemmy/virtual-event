@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IMAGE_UPLOAD_TYPE } from 'src/app/constants/image';
+import { Slim } from 'src/app/types/Slim';
 import { convertCanvasToFile } from 'src/app/utilities/image';
 
 @Component({
@@ -11,10 +12,10 @@ export class ImageUploadComponent implements OnInit {
   @Input() uploading: boolean = false;
   @Output() onCancel = new EventEmitter();
   @Output() onUpload: EventEmitter<any> = new EventEmitter();
-  private slim: any;
+  private slim!: Slim;
   public imageUploadType: string = IMAGE_UPLOAD_TYPE;
 
-  slimOptions = {
+  public slimOptions = {
     ratio: '1:1',
     size: '200,200',
     maxFileSize: 2,

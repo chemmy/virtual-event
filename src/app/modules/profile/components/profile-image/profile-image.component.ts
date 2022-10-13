@@ -15,13 +15,15 @@ export class ProfileImageComponent implements OnInit {
   public showUploader: boolean = false;
   public imageUrl: string = '';
   public uploading: boolean = false;
+  public defaultImageSrc = DEFAULT_USER_ICON_SRC;
   private subscriptions: Subscription[] = [];
 
   constructor(private store: Store<AppState>) { }
 
   async ngOnInit(): Promise<void> {
     this.subscriptions.push(this.store.select(selectImage).subscribe((data) => {
-      this.imageUrl = data || DEFAULT_USER_ICON_SRC;
+      this.imageUrl = data;
+      this.showUploader = !this.imageUrl;
     }));
 
     this.subscriptions.push(this.store.select(selectUploading).subscribe((data) => {

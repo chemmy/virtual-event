@@ -78,6 +78,18 @@
           background-color: transparent;
           color: $text-color-light;
         }
+
+        &:focus {
+          border: none;
+          background-color: transparent;
+          outline: none;
+        }
+
+        &:focus-visible {
+          background: transparent;
+          border: 1px solid $white;
+          border-radius: 4px;
+        }
       }
 
       &:hover {

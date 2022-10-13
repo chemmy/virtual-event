@@ -1,5 +1,5 @@
 <div *ngIf="!this.showUploader" class="profile-image">
-  <img src="{{ imageUrl }}" alt="Profile image">
+  <img src="{{ imageUrl || defaultImageSrc }}" alt="Profile image">
   <a class="edit-link" (click)="onEditClick()">Edit</a>
 </div>
 
