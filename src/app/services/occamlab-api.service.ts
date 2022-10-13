@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of, map, mergeMap } from 'rxjs';
 import { Authentication, ProfileImage } from '../types/User';
 import { IMAGE_UPLOAD_TYPE } from '../constants/image';
-import { AUTH_STORAGE_KEY } from '../constants/auth';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

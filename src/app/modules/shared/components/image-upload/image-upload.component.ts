@@ -11,8 +11,8 @@ export class ImageUploadComponent implements OnInit {
   @Input() uploading: boolean = false;
   @Output() onCancel = new EventEmitter();
   @Output() onUpload: EventEmitter<any> = new EventEmitter();
-  slim: any;
-  imageUploadType: string = IMAGE_UPLOAD_TYPE;
+  private slim: any;
+  public imageUploadType: string = IMAGE_UPLOAD_TYPE;
 
   slimOptions = {
     ratio: '1:1',
@@ -26,11 +26,11 @@ export class ImageUploadComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onCancelClick() {
+  onCancelClick(): void {
     this.onCancel.emit()
   }
 
-  onSaveClick() {
+  onSaveClick(): void {
     const canvas = this.slim?.data?.output?.image ?? "";
     if (!canvas) return;
 
@@ -39,7 +39,7 @@ export class ImageUploadComponent implements OnInit {
     });
   }
 
-  slimInit(_: never, slim:any) {
+  slimInit(_: never, slim: any): void {
     this.slim = slim;
   };
 

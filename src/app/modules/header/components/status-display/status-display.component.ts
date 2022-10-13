@@ -10,24 +10,18 @@ import { selectImage, selectVisibility } from 'src/app/state/user/user.selectors
   styleUrls: ['./status-display.component.scss']
 })
 export class StatusDisplayComponent implements OnInit {
-  storeVisibility$ = this.store.select(selectVisibility);
-  storeImage$ = this.store.select(selectImage);
-  visibility: boolean = false;
-  imageUrl: string = '';
+  public visibility: boolean = false;
+  public imageUrl: string = '';
 
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.storeVisibility$.subscribe((data) => {
+    this.store.select(selectVisibility).subscribe((data) => {
       this.visibility = data;
     });
 
-    this.storeImage$.subscribe((data) => {
-      this.imageUrl = data;
+    this.store.select(selectImage).subscribe((data) => {
+      this.imageUrl = data || DEFAULT_USER_ICON_SRC;
     });
-  }
-
-  getImageSource(): string {
-    return this.imageUrl || DEFAULT_USER_ICON_SRC;
   }
 }

@@ -20,7 +20,9 @@
     
     <div class="detail-group">
       <span class="label">Visibility</span>
-      <p class="detail"><em>{{ getVisibilityMessage() }}</em></p>
+      <p class="detail">
+        <em>You are currently {{ visibility ? '' : 'not ' }}visible to other attendees.</em>
+      </p>
 
       <div class="form-check form-switch">
         <input
