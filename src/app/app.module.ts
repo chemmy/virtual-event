@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { SlimModule } from '../assets/lib/slim/slim.angular.module'
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ImageUploadComponent } from './components/image-upload/image-upload.component';
@@ -19,25 +18,22 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { userReducer } from './state/user/user.reducer';
 import { UserEffects } from './state/user/user.effects';
-import { FooterDesktopComponent } from './components/footer-desktop/footer-desktop.component';
-import { FooterMobileComponent } from './components/footer-mobile/footer-mobile.component';
 import { HeaderModule } from './modules/header/header.module';
+import { FooterModule } from './modules/footer/footer.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
     WelcomeComponent,
     ProfileComponent,
     ImageUploadComponent,
     ProfileImageComponent,
     ProfileDetailsComponent,
-    ButtonComponent,
-    FooterDesktopComponent,
-    FooterMobileComponent
+    ButtonComponent
   ],
   imports: [
     HeaderModule,
+    FooterModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
