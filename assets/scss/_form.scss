@@ -13,4 +13,48 @@
       }
     }
   }
+
+  .btn {
+    font-size: $font-size-regular;
+    line-height: 15px;
+    padding: 6px 19px;
+    border: 1px solid $blue-ribbon;
+    color: $blue-ribbon;
+    border-radius: 15px;
+    min-width: 72px;
+  
+    &:hover {
+      border-color: $dove-gray;
+      color: $dove-gray;
+    }
+  
+    &.primary {
+      color: $white;
+      background-color: $blue-ribbon;
+  
+      &:hover {
+        border-color: $mercury;
+        background-color: $mercury;
+        color: $cabaret;
+        font-size: $font-size-xsmall;
+        text-transform: uppercase;
+      }
+  
+      &:disabled {
+        background-color: $malibu;
+        opacity: 1;
+        color: $concrete;
+      }
+    }
+  
+    &.secondary {
+      border-color: transparent;
+      padding: 6px 8px;
+      min-width: auto;
+  
+      &:hover {
+        color: $blue-ribbon;
+      }
+    }
+  }
 }
